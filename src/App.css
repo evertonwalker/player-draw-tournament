@@ -1,41 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
  }
 
-body{
-  background-color: rgb(41, 41, 41);
+
+body {
+  position: relative;
+  font-family: 'Kalam', cursive;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://tecmasters.com.br/wp-content/uploads/2022/01/League-of-Legends-12.jpg'), linear-gradient(to right, #838485, #58595a);
+  background-size: cover;
+  opacity: 0.8;
+  z-index: -1;
+  
+
+}
+h4 {
+ text-align: center;
+ color: #fff;
+ font-size: 1.3rem;
 }
 
 .container-header {
-  margin: 5%;
-  color: #FFF;
+  margin: 2%;
+  color: #484848;
   display: flex;
   justify-content: center;
 }
+.container-header h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: #00000096 ;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 700;
+  
+}
+img {
+  max-width: 200px;
+}
 
 .players{
-  margin-top: 5%;
+  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container-add-players{
   width: 50%;
   padding-left: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .container-players {
   width: 50%;
 }
 
+.container-btn-input {
+  width: 400px;
+  
+}
+
 .add-player-button {
-  padding: 8px;
+  padding: 10px 15px;
   background-color:#1A8CD8;
   color: #FFF;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -43,27 +89,116 @@ body{
   display: block;
   color: #FFF;
   margin-bottom: 5%;
+  font-size: 1.5rem;
+}
+
+.container-btn-input {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 input {
   padding: 8px;
-  border-radius: 12px;
+  border-radius: 5px;
   border: none;
   margin-right: 5%;
+  outline: none;
 }
 
-.list-player-ul {
+.container-players {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: max-content;
+}
+
+.time1 .list-player-ul , .time2 .list-player-ul{
   list-style-type: none;
   color: #FFF;
   font-size: 18px;
+  padding: 20px;
+}
+
+.time1 {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.time1 h1, .time2 h1 {
+  text-align: center;
+}
+.time2 {
+  flex: 1;
+}
+
+.list-player-ul li {
+  display: inline;
+  color: #fff;
+}
+
+.list-player-ul span {
+  display: inline;
+  text-align: center;
+}
+
+.selected-players {
+  width: max-content;
+  padding: 10px;
+  background-color: #000000b6;
+}
+.selected-players .list-player-ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.selected-players .list-player-ul li{
+  display: flex;
+  margin-right: 25px;
+  padding: 5px 10px;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem
 }
 
 .remove-player-button {
   margin-left: 5%;
-  padding: 4px;
+  width: 20px;
+  height: 20px;
+  padding: 0px 5px;
   color: #FFF;
   background-color: rgb(204, 71, 71);
   border: none;
-  border-radius: 16px;
+  border-radius: 50%;
   font-size: 12px;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.container-times {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  background-color: #000000b6;
+  position: relative;
+  
+}
+
+.content-time1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.titule-roles {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+}
+
+big {
+  color: #fff;
+  position: absolute;
+  bottom: 72px;
+  font-size: 250%;
 }
