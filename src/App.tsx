@@ -21,11 +21,6 @@ function App() {
   const [drawTeams, setDrawTeams] = useState(false);
   const isDisabled = players.length % 2 !== 0 || players.length === 0;
 
-  useEffect(() => {
-    console.log(team1);
-    console.log(team2);
-  }, [team1, team2]);
-
   const addPlayer = () => {
     if (name) {
       setPlayers([
@@ -72,9 +67,6 @@ function App() {
       shuffledPlayers.length
     );
 
-    console.log(team1Players, "team1Players ");
-    console.log(team2Players, "team2Players ");
-
     // Atribuir posição aleatória para cada jogador
     const positions = [
       { id: 1, name: "Top" },
@@ -91,7 +83,6 @@ function App() {
       { id: 5, name: "Supp" },
     ];
 
-    console.log(team1Players);
     team1Players.forEach((player) => getRoleWithoutRepeat(player, positions));
     team2Players.forEach((player) => getRoleWithoutRepeat(player, positions2));
 
