@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import img from "./assets/img/League-Of-Legends-Logo-Background-PNG.png";
 
